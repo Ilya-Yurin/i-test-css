@@ -1,0 +1,34 @@
+.form {
+  display: grid;
+  grid-gap: 0 16px;
+  grid-template-columns: repeat(2, 1fr);
+
+  &Item {
+    display: grid;
+    grid-gap: 0 16px;
+    grid-template-columns: 1fr 3fr;
+
+    label {
+      color: var(--text-light);
+    }
+
+    :global {
+      .ant-form-item-control-input-content {
+        border-bottom: 1px solid var(--secondary);
+      }
+    }
+  }
+}
+
+.action {
+  display: grid;
+  grid-gap: 0 8px;
+  grid-template-columns: repeat(2, 100px);
+}
+
+@media only screen and (max-width: 970px) {
+  .form {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
